@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href='http://fonts.font.im/css?family=Lora' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.font.im/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+<link href='http://fonts.font.im/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.font.im/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<title>Homepage</title>
+    <canvas id="c_n9" width="1920" height="990" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0;"></canvas>
+<script src="fun.js"></script>
+<style>
+.dropbtn {
+    background-color: #c4d337;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position:sticky;
+    display: inline-block;
+    float: right;
+    width: 8%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 5%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {background-color: #c9d363}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #7c861a;
+}
+    
+.gradient {
+    background-color: rgba(213, 219, 115, 0.86);
+    /* IE9, iOS 3.2+ */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjEwMCUiIHgyPSIwJSIgeTI9IjAlIj48c3RvcCBzdG9wLWNvbG9yPSIjYWFiNzA2IiBzdG9wLW9wYWNpdHk9IjAuNzIiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNmZmZmZTAiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==);
+    background-image: -webkit-gradient(linear, 0% 100%, 0% 0%,color-stop(0, rgba(170, 183, 6, 0.72)),color-stop(1, rgb(255, 255, 224)));
+    /* Android 2.3 */
+    background-image: -webkit-linear-gradient(bottom,rgba(170, 183, 6, 0.72) 0%,rgb(255, 255, 224) 100%);
+    /* IE10+ */
+    background-image: linear-gradient(to top,rgba(170, 183, 6, 0.72) 0%,rgb(255, 255, 224) 100%);
+    background-image: -ms-linear-gradient(bottom,rgba(170, 183, 6, 0.72) 0%,rgb(255, 255, 224) 100%);
+    background-size:100% 100%; 
+	background-attachment: fixed;
+
+}
+ 
+/* IE8- CSS hack */
+@media \0screen\,screen\9 {
+    .gradient {
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffffe0",endColorstr="#b8aab706",GradientType=0);
+    }
+}
+ 
+.title{
+    font-family: 'Lora', serif;
+    text-align: center;
+    font-size: 60px;
+    padding: 0;
+}    
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3f4601;
+    float: left;
+    width: 92%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+}
+
+
+li a:hover:not(.active) {
+    background-color: #c4d337;
+}
+
+.active {
+    background-color: #d09e13;
+}
+    
+
+.pop{
+    font-family: 'Titillium Web', sans-serif;    
+    font-size: 20px;
+}    
+
+
+
+        table
+        {
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+        }
+        table td, table th
+        {
+            border: 1px solid #e2ddba;
+            color:black;
+            height: 30px;
+        }
+        table thead th
+        {
+            background-color: rgba(63,70,1,0.5);;
+            width: 200px;
+        }
+        table tr:nth-child(odd)
+        {
+            background: rgba(255,255,255,0.3);
+        }
+        table tr:nth-child(even)
+        {
+            background: rgba(245,255,255,0.3);
+        }
+        
+    
+    
+        .button {
+    border-radius:10px;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border:none;
+        
+	}
+.button1 {
+    background-color: white; 
+    color: black; 
+    font-family: 'Montserrat', sans-serif;    
+    font-size: 16px;
+	}
+.button1:hover {
+    background-color: #3f4601;
+    color: white;
+	}
+    
+.button2 {
+    background-color:inherit;
+    color: black; 
+    font-family: 'Montserrat', sans-serif;    
+    font-size: 16px;
+	}
+.button2:hover {
+    background-color: #3f4601;
+    color: white;
+	}
+    
+.button3 {
+    background-color:inherit;
+    color: black; 
+    font-family: 'Montserrat', sans-serif;    
+    font-size: 16px;
+	}
+.button3:hover {
+    background-color: #3f4601;
+    color: white;
+	}
+    .table_cont{
+        font-family: 'Architects Daughter', cursive;
+        font-size: 20px;
+    }
+    .table_title{
+        font-family: 'Architects Daughter', cursive;
+    }
+    
+</style>
+</head>
+<body class = "gradient">
+    <h1 class = "title">TickTock</h1>
+    <ul>
+      <li><a href="/homepage">Home</a></li>
+      <li><a href="#news">Guide</a></li>
+      <li style="float:right"><a class = "active" th:text="'Welcome! ' + ${userLogin.getUsername()}">Username</a></li>
+    </ul>
+    
+    
+    <div class="dropdown">
+  <button class="dropbtn">Settings</button>
+  <div class="dropdown-content">
+    <a href="/homepage">To-dos</a>
+    <a href="/login">Sign Out</a>
+  </div>
+</div>
+<br><br><br><br>
+            <table class="table table-hover table-condensed">
+                <center><h1 class = "table_title" th:text="| ${userLogin.getUsername()} 's To-do List |">To-do list </h1></center>
+                <center><h3 class = "table_title" th:text="${time}">Time</h4></center>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Time</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="task : ${taskList}">
+                         <td class = "table_cont" th:text="${task.taskname}"></td>
+                        <td class = "table_cont" th:text="${task.time_start}"></td>
+                        <td class = "table_cont" th:text="${task.tasktype}"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br><br>
+            <div><center><a class="button button1" href="/togenerate" role="button">Back</a></center></div>
+            
+    
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href='http://fonts.font.im/css?family=Lora' rel='stylesheet' type='text/css'>
+<link href='http://fonts.font.im/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.font.im/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<title>Homepage</title>
+    <canvas id="c_n9" width="1920" height="990" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0;"></canvas>
+<script src="fun.js"></script>
+<style>
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+}
+
+.dropdown {
+    position:sticky;
+    display: inline-block;
+    float: right;
+    width: 8%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 8%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #a9cfe4}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+    
+.gradient {
+    background-color: #65908f;
+    /* IE9, iOS 3.2+ */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjEwMCUiIHgyPSIwJSIgeTI9IjAlIj48c3RvcCBzdG9wLWNvbG9yPSIjMGM0ODNkIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMC4wOSIvPjxzdG9wIHN0b3AtY29sb3I9IiNkMGU3ZjIiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==);
+    background-image: -webkit-gradient(linear, 0% 100%, 0% 0%,color-stop(0.09, rgb(12, 72, 61)),color-stop(1, rgb(208, 231, 242)));
+    /* Android 2.3 */
+    background-image: -webkit-linear-gradient(bottom,rgb(12, 72, 61) 9%,rgb(208, 231, 242) 100%);
+    /* IE10+ */
+    background-image: linear-gradient(to top,rgb(12, 72, 61) 9%,rgb(208, 231, 242) 100%);
+    background-image: -ms-linear-gradient(bottom,rgb(12, 72, 61) 9%,rgb(208, 231, 242) 100%);
+        background-size:100% 100%; 
+	background-attachment: fixed;
+
+}
+ 
+/* IE8- CSS hack */
+@media \0screen\,screen\9 {
+    .gradient {
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffd0e7f2",endColorstr="#ff0c483d",GradientType=0);
+    }
+}
+ 
+.title{
+    font-family: 'Lora', serif;
+    text-align: left;
+    font-size: 30px;
+    padding-left: 30px;
+}    
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #002a2a;
+    float: left;
+    width: 92%;
+    height: 30px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 50px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+li a:hover:not(.active) {
+    background-color: #6eb0b0;
+}
+
+.active {
+    background-color: #157979;
+}
+    
+
+.pop{
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 20px;
+    float: left;
+    clear:left;
+    display: block;
+    margin-left: 38%;
+}  
+    
+.pop2{
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 20px;
+    display: block;
+    color: aliceblue;
+} 
+
+    
+.ipt{
+    font-size:18px;
+    height:1em;
+	border-radius:10px;
+    border:1px solid #c8cccf;
+	color:#986655;
+	display:block;
+	text-align:center;
+    float: right;
+    margin-right: 28%;
+    margin-top: 0.5%;
+    width: 20%;
+}
+    
+    
+    .button {
+    border-radius:10px;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border:none;
+        
+	}
+.button1 {
+    background-color: white; 
+    color: black; 
+    font-family: 'Montserrat', sans-serif;    
+    font-size: 16px;
+	}
+.button1:hover {
+    background-color: #002a2a;
+    color: white;
+	}
+</style>
+</head>
+<body class = "gradient">
+    <h1 class = "title">TickTock</h1>
+    <ul>
+      <li><a href="/homepage">Home</a></li>
+      <li><a href="#news">Guide</a></li>
+      <li style="float:right"><a class = "active" th:text="'Welcome! ' + ${userLogin.getUsername()}">Username</a></li>
+    </ul>
+    
+    
+    <div class="dropdown">
+  <button class="dropbtn">Settings</button>
+  <div class="dropdown-content">
+ 	<a href="/togenerate">Don't Ask, Click me! </a>
+    <a href="/showhistory">History </a>
+    <a href="/login">Sign Out</a>
+  </div>
+</div>
+<br><br><br>
+
+<form action="addtask" method="post" >                 
+
+                <p class="pop">Task name:</p>
+                <br><input type="text" class="ipt" id="name" name="name" required="required"/>
+    <br>
+    <p class="pop">Type:</p>
+                <br><br><input type="text" class="ipt" id="type" name="type" required="required" list = "typelist"/>
+    <br>
+    
+                <p class="pop">Time-start:</p>
+                 <br><br> <input type="datetime-local" data-date-format = "yyyy-MM-dd HH:mm:ss" class="ipt"  name="time1">
+<br>
+ 	<p class="pop">Time-finish:</p>
+                <br><br><input type="datetime-local" data-date-format = "yyyy-MM-dd HH:mm:ss" class="ipt"  name="time2">
+                <br>
+    <p class="pop">Status:</p>
+    <br><br><input type="text" class="ipt" id="status" name="status" required="required" value = "Unfinished" list="statuschoice"/>
+    <datalist id="statuschoice">
+        <option>Unfinished</option>
+        <option>finished</option>
+    </datalist>
+       <datalist id="typelist">
+        <option>School</option>
+        <option>Work</option>
+        <option>Others</option>
+    </datalist>
+    
+    <br><br><br>
+    
+    <center class = "pop2">Note: Start/Finish time is not required</center>
+    <br><br>
+    <center><input class="button button1" type="submit" value="Add to schedule"/>&nbsp;&nbsp;</center>
+    <br><br><br><br>
+</form>
+
+    
+
+</body>
+</html>

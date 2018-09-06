@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href='http://fonts.font.im/css?family=Lora' rel='stylesheet' type='text/css'>
+<link href='http://fonts.font.im/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.font.im/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<title>Homepage</title>
+    <canvas id="c_n9" width="1920" height="990" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0;"></canvas>
+<script src="fun.js"></script>
+<style>
+.dropbtn {
+    background-color: #fff500;
+    color:darkslategray;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+}
+
+.dropdown {
+    position:sticky;
+    display: inline-block;
+    float: right;
+    width: 8%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 8%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #a9cfe4}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #602500;
+    color: aliceblue;
+}
+    
+.gradient {
+    background-color: #fe922c;
+    /* IE9, iOS 3.2+ */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIxMjglIiBjeT0iNjMxJSIgcj0iNjMxJSI+PHN0b3Agc3RvcC1jb2xvcj0iI2ZhMDAwMCIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAiLz48c3RvcCBzdG9wLWNvbG9yPSIjZmZhODFkIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMC40NjEiLz48c3RvcCBzdG9wLWNvbG9yPSIjZmZlMTY0IiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMC45MzkwMDAwMDAwMDAwMDAxIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+    /* Android 2.3- hack (needed for the actual radial gradient) */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIxMjglIiBjeT0iNjMxJSIgcj0iNjMxJSI+PHN0b3Agc3RvcC1jb2xvcj0iI2ZhMDAwMCIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAiLz48c3RvcCBzdG9wLWNvbG9yPSIjZmZhODFkIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMC40NjEiLz48c3RvcCBzdG9wLWNvbG9yPSIjZmZlMTY0IiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMC45MzkwMDAwMDAwMDAwMDAxIi8+PC9yYWRpYWxHcmFkaWVudD48cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+),
+        -webkit-gradient(radial, 128 631, 0, 128 631, 3390,color-stop(0, rgb(250, 0, 0)),color-stop(0.461, rgb(255, 168, 29)),color-stop(0.939, rgb(255, 225, 100)));
+    /* Android 2.3 */
+    background-image: -webkit-radial-gradient(128px 631px, circle farthest-side,rgb(250, 0, 0) 0%,rgb(255, 168, 29) 46.1%,rgb(255, 225, 100) 93.9%);
+    /* IE10+ */
+    background-image: radial-gradient(circle farthest-side at 128px 631px,rgb(250, 0, 0) 0%,rgb(255, 168, 29) 46.1%,rgb(255, 225, 100) 93.9%);
+    background-image: -ms-radial-gradient(128px 631px, circle farthest-side,rgb(250, 0, 0) 0%,rgb(255, 168, 29) 46.1%,rgb(255, 225, 100) 93.9%);
+        background-size:100% 100%; 
+	background-attachment: fixed;
+
+}
+ 
+/* IE8- CSS hack */
+@media \0screen\,screen\9 {
+    .gradient {
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fffa0000",endColorstr="#ffffe164",GradientType=0);
+    }
+}
+
+ 
+.title{
+    font-family: 'Lora', serif;
+    text-align: left;
+    font-size: 30px;
+    padding-left: 30px;
+}    
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #602500;
+    float: left;
+    width: 92%;
+    height: 30px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 50px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+li a:hover:not(.active) {
+    background-color: #ff8540;
+}
+
+.active {
+    background-color: #ff6200;
+}
+    
+
+.pop{
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 15px;
+    display: block;
+}  
+    
+.pop2{
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 20px;
+    display: block;
+    color:darkslategrey;
+    padding: 10px;
+} 
+.pop3{
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 15px;
+    display: block;
+    color:darkslategrey;
+    padding: 10px;
+    padding: 5px;
+} 
+    
+.ipt{
+    font-size:18px;
+    height:1em;
+	border-radius:10px;
+    border:1px solid #c8cccf;
+	color:#986655;
+	display:block;
+	text-align:center;
+    width: 20%;
+}
+    
+    
+    .button {
+    border-radius:10px;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border:none;
+        
+	}
+.button1 {
+    background-color: white; 
+    color: black; 
+    font-family: 'Montserrat', sans-serif;    
+    font-size: 16px;
+	}
+.button1:hover {
+    background-color: #602500;
+    color: white;
+	}
+    
+</style>
+</head>
+<body class = "gradient">
+    <h1 class = "title">TickTock</h1>
+    <ul>
+      <li><a href="/homepage">Home</a></li>
+      <li><a href="#news">Guide</a></li>
+      <li style="float:right"><a class = "active" th:text="'Welcome! ' + ${userLogin.getUsername()}">Username</a></li>
+    </ul>
+    
+    
+    <div class="dropdown">
+  <button class="dropbtn">Settings</button>
+  <div class="dropdown-content">
+    <a href="/showhistory">History </a>
+    <a href="/login">Sign Out</a>
+  </div>
+</div>
+<br><br><br>
+
+<form action="generate" method="post" >                 
+
+    <center class = "pop2">Getting tired of making plans?</center>
+    <center class = "pop2">Let TickTock generate a daily schedule for you!</center>
+    <center class = "pop3">Note: Your own tasks will have the top priorities. </center>
+    <br><br><br>
+    <center class="pop2">Select Date:</center>
+    <center><input type="date" class="ipt"  name="time_select"></center>
+<br>
+    
+    <center><input class="button button1" type="submit" value="Generate Schedule"/>&nbsp;&nbsp;</center>
+    <br><br><br><br>
+</form>
+
+    
+
+</body>
+</html>
