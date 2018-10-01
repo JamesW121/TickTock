@@ -14,11 +14,17 @@ TickTock is a creative schedule/task management system which allows its users to
 
 ### What Will be Improved 
 TickTock will have the best performance on browsers which fully support HTML5, such as Chrome, MS Edge and opera.
+
 Safari, Firefox and IOS users may having trouble inputting date/time.
+
 Please follow the following pattern if your browser does not pop up datetime picker automatically:
+
 xxxx-xx-xx xx:xx
+
 YYYY-MM-DD HH:mm
+
 For example: "2018-09-23 10:00"
+
 A new datetime picker will be implemented and this problem will be fixed on next update
 
 ### User Cases
