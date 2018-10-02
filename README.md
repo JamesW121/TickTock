@@ -28,3 +28,27 @@ For example: "2018-09-23 10:00"
 A new datetime picker will be implemented and this problem will be fixed on next update
 
 ### User Cases
+
+Register 
+![Image text](https://github.com/JamesW121/TickTock/blob/master/image/pic/3.PNG)
+
+Success
+![Image text](https://github.com/JamesW121/TickTock/blob/master/image/pic/4.PNG)
+
+Email Confirmation 
+![Image text](https://github.com/JamesW121/TickTock/blob/master/image/pic/9.PNG)
+
+Login
+![Image text](https://github.com/JamesW121/TickTock/blob/master/image/pic/2.PNG)
+
+Add
+![Image text](https://github.com/JamesW121/TickTock/blob/master/image/pic/5.PNG)
+
+Update
+![Image text](https://github.com/JamesW121/TickTock/blob/master/image/pic/6.PNG)
+
+Generate Schedule 
+![Image text](https://github.com/JamesW121/TickTock/blob/master/image/pic/7.PNG)
+
+Sample Schedule 
+![Image text](https://github.com/JamesW121/TickTock/blob/master/image/pic/8.PNG)
